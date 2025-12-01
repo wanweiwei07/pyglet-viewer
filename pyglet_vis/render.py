@@ -39,6 +39,6 @@ class Render:
         mvp_mat = self.camera.vp_mat @ model.wd_tfmat
         self.shader.program['u_mvp'] = mvp_mat.T.flatten()
         self.shader.program['u_model'] = model.wd_tfmat.T.flatten()
-        self.program['u_point_size'] = 1.0
+        self.shader.program['u_point_size'] = 1.0
         self.shader.program['u_view_pos'] = self.camera.pos
-        self.program['u_alpha'] = 1.0
+        self.shader.program['u_alpha'] = 1.0

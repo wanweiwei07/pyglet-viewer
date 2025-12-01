@@ -9,7 +9,7 @@ import pyglet_vis.world as wd
 mesh = trm.load_mesh("bunnysim.stl")
 model = mdl.Model(geo.Geometry(verts=mesh.vertices,
                                faces=mesh.faces,
-                               rgbs=const.pink))
+                               rgbs=const.BasicColor.GREEN))
 scene = scn.Scene()
 scene.add(model)
 base = wd.World()

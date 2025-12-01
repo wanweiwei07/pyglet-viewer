@@ -29,7 +29,7 @@ class Geometry:
 
     def _ensure_rgbs(self, c, n_verts):
         if c is None:
-            return const.default_rgb
+            return const.BasicColor.DEFAULT
         c = np.asarray(c, dtype=np.float32)
         # single RGBA
         if c.ndim == 1 and c.shape == (3,):
@@ -47,7 +47,7 @@ class Geometry:
 if __name__ == '__main__':
     from pyglet_vis import loader
 
-    verts, faces = loader.load_stl("bunnysim.stl")
+    verts, faces = loader.load_stl("../bunnysim.stl")
     geom = Geometry(verts=verts, faces=faces)
     print("Face normals:", geom.compute_face_normals())
     print("Is point cloud:", geom.is_point_cloud)

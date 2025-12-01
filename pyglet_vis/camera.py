@@ -63,7 +63,7 @@ class Camera:
         return self._pos
 
     @pos.setter
-    @decorators.mark_dirty('_view_dirty')
+    @decorators.mark_dirty('_mark_view_dirty')
     def pos(self, pos):
         self._pos = np.asarray(pos, dtype=np.float32)
 
@@ -72,7 +72,7 @@ class Camera:
         return self._look_at
 
     @look_at.setter
-    @decorators.mark_dirty('_view_dirty')
+    @decorators.mark_dirty('_mark_view_dirty')
     def look_at(self, look_at):
         self._look_at = np.asarray(look_at, dtype=np.float32)
 
@@ -81,7 +81,7 @@ class Camera:
         return self._up
 
     @up.setter
-    @decorators.mark_dirty('_view_dirty')
+    @decorators.mark_dirty('_mark_view_dirty')
     def up(self, up):
         self._up = np.asarray(up, dtype=np.float32)
 
@@ -90,7 +90,7 @@ class Camera:
         return self._fov
 
     @fov.setter
-    @decorators.mark_dirty('_proj_dirty')
+    @decorators.mark_dirty('_mark_proj_dirty')
     def fov(self, fov):
         self._fov = fov
 
@@ -99,7 +99,7 @@ class Camera:
         return self._near
 
     @near.setter
-    @decorators.mark_dirty('_proj_dirty')
+    @decorators.mark_dirty('_mark_proj_dirty')
     def near(self, near):
         self._near = near
 
@@ -108,7 +108,7 @@ class Camera:
         return self._far
 
     @far.setter
-    @decorators.mark_dirty('_proj_dirty')
+    @decorators.mark_dirty('_mark_proj_dirty')
     def far(self, far):
         self._far = far
 
